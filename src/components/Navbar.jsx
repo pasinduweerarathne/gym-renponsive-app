@@ -14,7 +14,12 @@ const Navbar = () => {
     <nav>
       <div className="container nav_container">
         <Link to="/">
-          <img className="logo" src={Logo} alt="" />
+          <img
+            className="logo"
+            src={Logo}
+            alt=""
+            onClick={() => setIsNavOpen(!isNavOpen)}
+          />
         </Link>
         <ul className={`nav_links ${isNavOpen ? "show_nav" : "hide_nav"}`}>
           {links.map(({ name, path }, index) => {
@@ -23,6 +28,7 @@ const Navbar = () => {
                 <NavLink
                   className={({ isActive }) => (isActive ? "active-nav" : "")}
                   to={path}
+                  onClick={() => setIsNavOpen(!isNavOpen)}
                 >
                   {name}
                 </NavLink>

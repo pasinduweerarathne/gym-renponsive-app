@@ -30,6 +30,7 @@
 
 /* General */
 body {
+  padding-top: 75px;
   font-family: "Montserrat", "sans-serif";
   color: var(--color-gray-200);
   line-height: 1.7;
